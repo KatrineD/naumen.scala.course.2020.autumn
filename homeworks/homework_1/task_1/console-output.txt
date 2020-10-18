@@ -1,0 +1,83 @@
+Microsoft Windows [Version 6.1.7601]
+(c) Корпорация Майкрософт (Microsoft Corp.), 2009. Все права защищены.
+
+C:\Users\User>scala
+Welcome to Scala 2.12.10 (OpenJDK 64-Bit Server VM, Java 11.0.8).
+Type in expressions for evaluation. Or try :help.
+
+scala> var first = "He"
+first: String = He
+
+scala> var second = 110
+second: Int = 110
+
+scala> var third = List("S", "c", "a", "l", "a", "!")
+third: List[String] = List(S, c, a, l, a, !)
+
+scala> var fourth = List("Th1s", "1s")
+fourth: List[String] = List(Th1s, 1s)
+
+scala> var name = "Katr1ne Dem1cheva"
+name: String = Katr1ne Dem1cheva
+
+scala> var all_str = Array(first + second.toString, third.mkString(""), fourth.mkString(" "), name)
+all_str: Array[String] = Array(He110, Scala!, Th1s 1s, Katr1ne Dem1cheva)
+
+scala> var all_str2 = all_str.mkString(" ")
+all_str2: String = He110 Scala! Th1s 1s Katr1ne Dem1cheva
+
+scala> var changed_str = all_str2.replace("11", "ll")
+changed_str: String = Hell0 Scala! Th1s 1s Katr1ne Dem1cheva
+
+scala> var changed_str2 = changed_str.replace("0", "o")
+changed_str2: String = Hello Scala! Th1s 1s Katr1ne Dem1cheva
+
+scala> var changed_str3 = changed_str2.replace("1", "i")
+changed_str3: String = Hello Scala! This is Katrine Demicheva
+
+scala> println(changed_str3)
+Hello Scala! This is Katrine Demicheva
+
+scala> var changed_greeting_list = changed_str3.split(" ").toList
+changed_greeting_list: List[String] = List(Hello, Scala!, This, is, Katrine, Demicheva)
+
+scala> var bonjour = changed_greeting_list.updated(0, "Bonjour").mkString(" ")
+bonjour: String = Bonjour Scala! This is Katrine Demicheva
+
+scala> println(bonjour)
+Bonjour Scala! This is Katrine Demicheva
+
+scala> var saluton = changed_greeting_list.updated(0, "Saluton").mkString(" ")
+saluton: String = Saluton Scala! This is Katrine Demicheva
+
+scala> println(saluton)
+Saluton Scala! This is Katrine Demicheva
+
+scala> var bonj_rep = bonjour.replace("Katrine Demicheva", "KatrineDemicheva")
+bonj_rep: String = Bonjour Scala! This is KatrineDemicheva
+
+scala> var reversed_name = name.reverse.replace("1", "i")
+reversed_name: String = avehcimeD enirtaK
+
+scala> var bonj_to_list = bonj_rep.split(" ").toList
+bonj_to_list: List[String] = List(Bonjour, Scala!, This, is, KatrineDemicheva)
+
+scala> var bonj_reversed = bonj_to_list.updated(4, reversed_name).mkString(" ").replace(".", "") + "."
+bonj_reversed: String = Bonjour Scala! This is avehcimeD enirtaK.
+
+scala> println(bonj_reversed)
+Bonjour Scala! This is avehcimeD enirtaK.
+
+scala> var saluton_rep = saluton.replace("Katrine Demicheva", "KatrineDemicheva")
+saluton_rep: String = Saluton Scala! This is KatrineDemicheva
+
+scala> var saluton_to_list = saluton_rep.split(" ").toList
+saluton_to_list: List[String] = List(Saluton, Scala!, This, is, KatrineDemicheva)
+
+scala> var saluton_reversed = saluton_to_list.updated(4, reversed_name).mkString(" ").replace(".", "") + "."
+saluton_reversed: String = Saluton Scala! This is avehcimeD enirtaK.
+
+scala> println(saluton_reversed)
+Saluton Scala! This is avehcimeD enirtaK.
+
+scala>
