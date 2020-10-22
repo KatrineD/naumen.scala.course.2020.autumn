@@ -106,6 +106,5 @@ object Exercises {
     
     /* С анонимной функцией: */
     var convert_to_Iterable = (x: Int, y: Int) => List(x, y)
-    def sum3(x: Int, y: Int): Int = sumIntegers(???)
-
+    def sum3(x: Int, y: Int): Int = sumIntegers(convert_to_Iterable(x, y))
 }
